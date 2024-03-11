@@ -1,0 +1,16 @@
+<button *ngIf="user && (user.perfil == 'Colocador' || user.perfil == 'Admin')" type="button" class="btn btn-primary custom" (click)="goToPage('proveedor')">
+  Proveedores
+</button>
+<button *ngIf="user && (user.perfil == 'Colocador' || user.perfil == 'Admin')"  type="button" class="btn btn-primary custom" (click)="goToPage('solicitud')">
+  Solicitud Compra
+</button>
+<button *ngIf="user && (user.perfil == 'Aprobador' || user.perfil == 'Admin')"  type="button" class="btn btn-primary custom" (click)="goToPage('aprobacion')">
+  Aprobaciones
+</button>
+<button type="button" class="btn btn-primary custom" (click)="logOut()">
+  Logout
+</button>
+<!--*ngIf="user.perfil == 'Colocador' || user.perfil == 'Admin'"-->
+<br>
+<br>
+<router-outlet></router-outlet>
